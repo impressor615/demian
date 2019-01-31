@@ -2,6 +2,8 @@ import * as bodyParser from "body-parser";
 import * as compression from "compression";
 import * as express from "express";
 
+import pagination from "./middlewares/pagination";
+import parseLanguage from "./middlewares/parseLanguage";
 import routes from "./routes";
 
 class App {
@@ -18,6 +20,8 @@ class App {
   private setupMiddlewares() {
     this.app.use(bodyParser.json());
     this.app.use(compression());
+    this.app.use(pagination);
+    this.app.use(parseLanguage);
   }
 
   private routes() {
