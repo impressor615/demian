@@ -8,5 +8,9 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
+    "baseUrl": "./",
+    "paths":{
+      "@/*": ["src/*"]
+    }
   }
 }

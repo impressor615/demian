@@ -1,5 +1,6 @@
 import * as chai from "chai";
-import pagination from "../../src/middlewares/pagination";
+
+import pagination from "@/middlewares/pagination";
 
 describe("middleware pagination", () => {
   const res = {};

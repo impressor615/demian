@@ -1,6 +1,6 @@
 import * as chai from "chai";
-import * as spies from "chai-spies";
-import sendError from "../../src/lib/sendError";
+
+import sendError from "@/lib/sendError";
 
 const { errors } = global as any;
 

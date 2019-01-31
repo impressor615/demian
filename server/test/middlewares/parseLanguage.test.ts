@@ -1,5 +1,6 @@
 import * as chai from "chai";
-import parseLanguage from "../../src/middlewares/parseLanguage";
+
+import parseLanguage from "@/middlewares/parseLanguage";
 
 describe("middleware parseLangauge", () => {
   const req = { acceptsLanguages: chai.spy(() => []) };
