@@ -1,8 +1,8 @@
+import * as bodyParser from "body-parser";
+import * as compression from "compression";
 import * as express from "express";
-import * as bodyParser from 'body-parser';
-import * as compression from 'compression';
 
-import routes from './routes';
+import routes from "./routes";
 
 class App {
   public app: express.Application;
@@ -15,13 +15,13 @@ class App {
     this.routes();
   }
 
-  setupMiddlewares() {
+  private setupMiddlewares() {
     this.app.use(bodyParser.json());
     this.app.use(compression());
   }
 
-  routes() {
-    this.app.use('/', routes(this.router));
+  private routes() {
+    this.app.use("/", routes(this.router));
   }
 }
 
