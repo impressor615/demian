@@ -12,8 +12,7 @@ export default (router: express.Router): void => {
   router.post("/create", async (req, res) => {
     const { title } = req.body;
     if (!title) {
-      // TODO: req.lanauge 확장해야 합니다.
-      sendError({ res, language: "en" });
+      sendError({ res, language: req.language });
       return;
     }
 
