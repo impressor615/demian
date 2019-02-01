@@ -10,7 +10,9 @@
     "start": "nodemon --watch src --delay 1 --exec 'ts-node -r tsconfig-paths/register' src/index.ts",
     "test": "mocha -r ts-node/register -r tsconfig-paths/register -r ./test/setup.ts test/**/*.test.ts --exit",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "prepush": "npm run test && npm run lint",
+    "push": "git push"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.25",
