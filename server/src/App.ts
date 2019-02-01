@@ -15,6 +15,7 @@ class App {
     this.router = express.Router();
     this.setupMiddlewares();
     this.routes();
+    this.setEnv();
   }
 
   private setupMiddlewares() {
@@ -26,6 +27,11 @@ class App {
 
   private routes() {
     this.app.use("/", routes(this.router));
+  }
+
+  private setEnv() {
+    const { JWT_SECRET } = process.env;
+    this.app.set("jwt-secret", JWT_SECRET);
   }
 }
 
