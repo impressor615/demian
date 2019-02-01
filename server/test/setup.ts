@@ -2,17 +2,17 @@ import * as chai from "chai";
 import chaiHttp = require("chai-http");
 import * as spies from "chai-spies";
 import * as dotenv from "dotenv";
+import * as path from "path";
 
 import App from "@/App";
 import { ERRORS } from "@/constants";
 import Database from "@/Database";
 import getModels from "@/models";
 
-dotenv.config();
+dotenv.config({ path: path.resolve(process.cwd(), ".env.test") });
 chai.should();
 chai.use(chaiHttp);
 chai.use(spies);
-// TODO: db config 따로 가져가야합니다.
 new Database({
   host: process.env.DB_HOST,
   name: process.env.DB_NAME,
