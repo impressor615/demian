@@ -1,11 +1,13 @@
 // tslint:disable:no-console
 import * as dotenv from "dotenv";
+import * as path from "path";
 import "source-map-support/register";
 
 import App from "./app";
 import Database from "./Database";
 
-dotenv.config();
+const CONFIG_PATH = process.env.NODE_ENV ? `.env.${process.env.NODE_ENV}` : ".env";
+dotenv.config({ path: path.resolve(process.cwd(), CONFIG_PATH)});
 const PORT: number = Number(process.env.PORT) || 3000;
 const app = new App().app;
 const db = new Database({
