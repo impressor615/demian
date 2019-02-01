@@ -12,7 +12,6 @@ dotenv.config();
 chai.should();
 chai.use(chaiHttp);
 chai.use(spies);
-// TODO: error message parsing method 추가
 // TODO: db config 따로 가져가야합니다.
 new Database({
   host: process.env.DB_HOST,
@@ -22,3 +21,8 @@ new Database({
 (global as any).app = new App().app;
 (global as any).errors = ERRORS;
 (global as any).models = getModels();
+(global as any).assertError = (error, compareObj) => {
+  const errorObj = JSON.parse(error);
+  errorObj.message.should.to.equal(compareObj.en);
+  errorObj.type.should.to.equal("error");
+};

@@ -1,6 +1,11 @@
 import * as chai from "chai";
 
-const { app, models } = global as any;
+const {
+  app,
+  models,
+  assertError,
+  errors,
+} = global as any;
 const { Hello } = models;
 describe("Router", () => {
   before(async () => {
@@ -19,6 +24,7 @@ describe("Router", () => {
     it("should return error when title is not probided", async () => {
       const res = await chai.request(app).post("/create").send({});
       res.status.should.equal(400);
+      assertError(res.error.text, errors.route_invalid_data);
     });
 
     it("should return new Hello _id", async () => {
