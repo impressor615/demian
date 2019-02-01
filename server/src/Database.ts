@@ -22,7 +22,6 @@ class Database {
 
     const { connection } = mongoose;
     connection.once("open", () => console.log(`succeed to connect to ${this.name} in mongoDB`));
-    createModels(connection);
 
     return connection;
   }

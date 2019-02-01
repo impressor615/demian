@@ -14,7 +14,7 @@ const createModels = (connection) => {
   });
 };
 
-export default (connection) => {
+export default (connection = mongoose.connection) => {
   const models = connection.models;
   if (!_.isEmpty(models)) {
     return models;
