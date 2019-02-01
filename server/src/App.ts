@@ -2,9 +2,9 @@ import * as bodyParser from "body-parser";
 import * as compression from "compression";
 import * as express from "express";
 
-import pagination from "./middlewares/pagination";
-import parseLanguage from "./middlewares/parseLanguage";
-import routes from "./routes";
+import pagination from "@/middlewares/pagination";
+import parseLanguage from "@/middlewares/parseLanguage";
+import routes from "@/routes";
 
 class App {
   public app: express.Application;
