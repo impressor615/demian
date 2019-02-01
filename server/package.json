@@ -13,13 +13,17 @@
     "build": "webpack --config webpack.config.js"
   },
   "devDependencies": {
+    "@types/bluebird": "^3.5.25",
     "@types/body-parser": "^1.17.0",
     "@types/chai": "^4.1.7",
     "@types/chai-http": "^3.0.5",
     "@types/chai-spies": "^1.0.0",
     "@types/compression": "0.0.36",
+    "@types/dotenv": "^6.1.0",
     "@types/express": "^4.16.1",
+    "@types/lodash": "^4.14.120",
     "@types/mocha": "^5.2.5",
+    "@types/mongoose": "^5.3.12",
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
     "chai-spies": "^1.0.0",
@@ -35,9 +39,13 @@
     "webpack-cli": "^3.2.1"
   },
   "dependencies": {
+    "bluebird": "^3.5.3",
     "body-parser": "^1.18.3",
     "compression": "^1.7.3",
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.4.8",
     "source-map-support": "^0.5.10"
   },
   "husky": {
