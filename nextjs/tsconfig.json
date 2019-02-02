@@ -15,5 +15,9 @@
     "sourceMap": true,
     "strict": true,
     "target": "esnext"
+    "baseUrl": "./",
+    "paths":{
+      "@/*": ["./*"]
+    }
   }
 }
