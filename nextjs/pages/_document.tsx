@@ -14,7 +14,15 @@ export default class MyDocument extends Document {
   public render() {
     return (
       <html>
-        <Head></Head>
+        <Head>
+          <meta name="description" content="nextjs-template" />
+          <meta name="keywords" content="nextjs,template" />
+          <meta name="author" content="demian" />
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
