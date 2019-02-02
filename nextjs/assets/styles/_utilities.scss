@@ -1,0 +1,13 @@
+@each $name, $value in $displayItems {
+  .d-#{$name} {
+    display: $value !important;
+  }
+  
+  @each $breakpoints-name, $breakpoints-value in $breakpoints {
+    @media (min-width: $breakpoints-value) {
+      .d-#{$breakpoints-name}-#{$name} {
+        display: $value !important;
+      }
+    }
+  }
+}
