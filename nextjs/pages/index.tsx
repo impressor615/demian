@@ -1,5 +1,3 @@
-import "@/assets/styles/main.scss";
-
 import Image from "@/assets/images/tennis-court.jpeg";
 
 export default () => (
