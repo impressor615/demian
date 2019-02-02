@@ -1,25 +1,25 @@
-import "isomorphic-unfetch";
 import "@/assets/styles/main.scss";
+import "isomorphic-unfetch";
 
-import React from 'react'
-import App, { Container } from 'next/app'
+import App, { Container } from "next/app";
+import React from "react";
 
 import NProgress from "next-nprogress/component";
-import Head from 'next/head';
+import Head from "next/head";
 
 export default class MyApp extends App {
-  static async getInitialProps({ Component, ctx }: { Component: any, ctx: object; }) {
-    let pageProps = {}
+  public static async getInitialProps({ Component, ctx }: { Component: any, ctx: object; }) {
+    let pageProps = {};
 
     if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx)
+      pageProps = await Component.getInitialProps(ctx);
     }
 
-    return { pageProps }
+    return { pageProps };
   }
 
-  render () {
-    const { Component, pageProps } = this.props
+  public render() {
+    const { Component, pageProps } = this.props;
 
     return (
       <Container>
@@ -27,6 +27,6 @@ export default class MyApp extends App {
         <Component {...pageProps} />
         <NProgress />
       </Container>
-    )
+    );
   }
 }
