@@ -6,13 +6,14 @@ interface PageProps {
   src: string;
   pcSrc?: string;
   children?: React.ReactNode;
+  className?: string;
 }
 
 class BackgroundImage extends PureComponent<PageProps, {}> {
   public render() {
-    const { src, pcSrc, children } = this.props;
+    const { src, pcSrc, children, ...rest } = this.props;
     return (
-      <section className="__background-image">
+      <section className={`__background-image ${rest.className}`}>
         <img src={src} className="d-md-none" />
         <img src={pcSrc} className="d-none d-md-block"/>
         { children }
