@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --open",
     "lint": "tslint -c tslint.json -e './node_modules/**/*' './**/*.ts?(x)'",
     "test": "jest",
-    "prepush": "npm run lint",
+    "prepush": "npm run lint && npm run test",
     "push": "git push"
   },
   "author": "",
