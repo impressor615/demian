@@ -1,11 +1,14 @@
 {
   "name": "react-spa",
   "version": "1.0.0",
-  "description": "",
+  "description": "react single page application",
+  "repository": "git@github.com:impressor615/demian.git",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open",
-    "lint": "tslint -c tslint.json -e './node_modules/**/*' './**/*.ts?(x)'"
+    "lint": "tslint -c tslint.json -e './node_modules/**/*' './**/*.ts?(x)'",
+    "prepush": "npm run lint",
+    "push": "git push"
   },
   "author": "",
   "license": "ISC",
