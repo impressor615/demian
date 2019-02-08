@@ -1,10 +1,15 @@
 import "@/assets/styles/main.scss";
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 
 import { Hello } from "@/components/Hello";
+import configureStore from "@/configureStore";
 
+const Store = configureStore();
 ReactDOM.render(
-    <Hello compiler="TypeScript" framework="React" />,
-    document.getElementById("app") as HTMLElement,
+  <Provider store={Store}>
+    <Hello compiler="TypeScript" framework="React" />
+  </Provider>,
+  document.getElementById("app") as HTMLElement,
 );
