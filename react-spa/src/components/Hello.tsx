@@ -38,4 +38,5 @@ const mapStateToProps = ({ hello }: { hello: HelloState }) => ({
   ...hello,
 });
 
+export const PureHello = Hello;
 export default connect(mapStateToProps)(Hello);

@@ -1,11 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Hello Component should be matched with snapshot 1`] = `
-<h1>
-  Hello from 
-  TypeScript
-   and 
-  React
-  !
-</h1>
+<Fragment>
+  <h1>
+    Hello from 
+    TypeScript
+     and 
+    React
+    !
+  </h1>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    change compiler
+  </button>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    change framework
+  </button>
+</Fragment>
 `;
