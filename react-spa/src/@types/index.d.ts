@@ -11,3 +11,7 @@ interface BaseAction {
   type: string;
   payload?: string | object;
 }
+
+interface ConnectProps {
+  dispatch: (arg: BaseAction) => void;
+}
