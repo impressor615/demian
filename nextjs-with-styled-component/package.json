@@ -6,9 +6,9 @@
   "main": "index.js",
   "repository": "git@github.com:impressor615/demian.git",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
+    "dev": "next src",
+    "build": "next build src",
+    "start": "next start src",
     "test": "jest",
     "lint": "tslint -c tslint.json -e './node_modules/**/*' './**/*.ts?(x)'",
     "prepush": "npm run test && npm run lint",
