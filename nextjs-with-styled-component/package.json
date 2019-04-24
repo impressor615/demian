@@ -9,6 +9,7 @@
     "dev": "next src",
     "build": "next build src",
     "start": "next start src",
+    "export": "npm run build && next export src",
     "test": "jest",
     "lint": "tslint -c tslint.json -e './node_modules/**/*' './**/*.ts?(x)'",
     "prepush": "npm run test && npm run lint",
