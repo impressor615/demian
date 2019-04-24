@@ -12,7 +12,10 @@
     "test": "jest",
     "lint": "tslint -c tslint.json -e './node_modules/**/*' './**/*.ts?(x)'",
     "prepush": "npm run test && npm run lint",
-    "push": "git push"
+    "push": "git push",
+    "analyze:server": "BUNDLE_ANALYZE=server yarn build",
+    "analyze:browser": "BUNDLE_ANALYZE=browser yarn build",
+    "analyze": "BUNDLE_ANALYZE=both yarn build"
   },
   "license": "ISC",
   "dependencies": {
@@ -20,6 +23,7 @@
     "@types/next": "^8.0.4",
     "@types/react": "^16.8.14",
     "@types/react-dom": "^16.8.4",
+    "@zeit/next-bundle-analyzer": "^0.1.2",
     "@zeit/next-typescript": "^1.1.1",
     "babel-plugin-module-resolver": "^3.2.0",
     "jest": "^24.7.1",
