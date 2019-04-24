@@ -1,7 +1,9 @@
+import CenterDiv from "@/src/components/CenterDiv";
+
 const Page: React.FC = () => (
-  <div>
+  <CenterDiv>
     <h1>Hello World</h1>
-  </div>
-)
+  </CenterDiv>
+);
 
 export default Page;
