@@ -5,10 +5,14 @@ export interface ICounterStates {
   count: number;
 }
 
+const initialState = {
+  count: 0,
+};
+
 const counterReducer: Reducer<
   ICounterStates,
   AnyAction
-> = (state, action) => {
+> = (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
     case DECREMENT:
