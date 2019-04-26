@@ -8,7 +8,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import { __NEXT_REDUX_STORE__  } from "@/src/constants/global";
 import counterReducer, { ICounterStates } from "./reducers/counter";
 
-interface IReduxStates {
+export interface IReduxStates {
   counter: ICounterStates;
 }
 
